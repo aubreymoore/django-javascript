@@ -1,0 +1,40 @@
+<html>
+
+{% load staticfiles %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/jstest.css' %}">
+    <link rel="styleSheet" href="{% static 'css/dtree.css' %}">
+    <script type="text/javascript" src="{% static 'js/dtree.js' %}">
+    </script>
+</head>
+
+<body>
+
+<h1>Hi</h1>
+
+<h2>Example</h2>
+
+<div class="dtree">
+
+	<p><a href="javascript: d.openAll();">open all</a> | <a href="javascript: d.closeAll();">close all</a></p>
+
+    <!-- <script>
+  	    alert('Hello, World!')
+  	</script> -->
+
+    <script>
+        d = new dTree('d');
+        d.config.inOrder = 'true';
+        d.add(0,-1,'My example tree');
+        d.add(1,0,'Node 1');
+        d.add(2,1,'Node 1.1');
+        d.add(3,2,'name','url','','target')
+        document.write(d);
+    </script>
+
+</div>
+
+</body>
+
+</html>
